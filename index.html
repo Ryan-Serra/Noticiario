@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticiário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="imagens/search_ideogram.ico" type="image/x-icon">
+</head>
+<body>
+    <header><h1 id="logo">Logo</h1> <nav id="menu"><a href="#" class="link" onclick="cadastrar()">Cadastro de Noticias</a> <a href="#" class="link" onclick="exibir()">Exibir Noticias </a> <input type="text" id="busca" placeholder="Busca" href="imagens/search_ideogram.ico"  onkeypress="press(event)"></nav><div id="menu-img"> <img id="menu-icon" src="imagens/menu_black_24dp.svg" alt="" onclick="menu()"></div><div id="menu-conf"><a href="#" class="link" onclick="cadastrar()">Cadastro de Noticias</a> <a href="#" class="link" onclick="exibir()">Exibir Noticias </a> <input type="text" id="busca" placeholder="Busca" href="imagens/search_ideogram.ico"  onkeypress="press(event)"></div></header>
+  <h1 id="msg"> Sem Noticias</h1>
+    <section id="conteiner">
+        
+    </section>
+    <section id="cadastro">
+        
+            <h1>Cadastro de  Noticias</h1>
+        
+                 Titulo: <input type="text" class="link-cadastro" placeholder="Insira o titulo" id="titulo"> <br>
+                 Categoria: <input type="text" class="link-cadastro"placeholder="Insira a Categoria" id="categoria"> <br>
+                 Conteúdo: <input type="text" class="link-cadastro" id="conteudo" placeholder="Insira o conteúdo" id="conteudo"> <br>
+                 <input type="button" value="Finalizar" id="btn" onclick="finalizar()">
+    </section>
+
+    <footer>Desenvolvido por Ryan Serra</footer>
+</body>
+<script src="app.js"></script>
+</html>

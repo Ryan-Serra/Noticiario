@@ -1,0 +1,34 @@
+
+.link-cadastro{
+    border-radius: 50px;
+    width: 100%;
+    display: block;
+    padding: 5px;
+}
+#conteudo{
+    height: 60px;
+    border-radius: 5px;
+}
+#cadastro{
+    display: none;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    background-color: white;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px
+}
+#cadastro header{
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: center;
+}
+#btn{
+    width: 80px;
+}
+#btn:hover{
+    background-color: gray;
+}
