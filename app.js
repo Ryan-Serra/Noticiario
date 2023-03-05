@@ -13,8 +13,11 @@
     var vet_cont=[]
        var cont=0
     var aux=-1
+    var menu_conf= document.getElementById('menu-conf')
+
     
 function cadastrar (){
+    menu_conf.style.display='none'
     conteiner.innerHTML=""
      cadastro.style.display="block"
      msg.style.display="none"
@@ -101,13 +104,16 @@ function press(event) {
     }
    
 }}}
+    
+menu_conf.style.display='none'
 function menu(){
-    var menu=document.getElementById("menu-conf")
-    if(menu.style.display==="none"){
-        menu.style.display='block'
+    
+    if(menu_conf.style.display==="none"){
+        menu_conf.style.display='block'
+        cadastro.style.display='none'
 
     }
     else{
-        menu.style.display="none"
+        menu_conf.style.display="none"
     }
     }
