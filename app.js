@@ -57,8 +57,9 @@ function finalizar(){
 
 }
 function exibir   (){
-    
+    menu_conf.style.display='none'
     cadastro.style.display="none"
+    conteiner.style.display='block'
     conteiner.innerHTML=''
     if(vet_titulo.length==0||vet_categ.length==0||vet_cont.length==0){
         alert("Não podemos exibir pois ainda não existem noticias cadastradas")
@@ -75,10 +76,15 @@ function exibir   (){
 }
      
 }
+conteiner.style.display='block'
+conteiner.innerHTML=""
 function press(event) {
-   if(event.key==='Enter'){    
+    
+   if(event.key==='Enter'){  
+    alert('Entrou')  
     cadastro.style.display='none'
        var procura= document.getElementById("busca").value
+       alert(` O valor de procura é ${procura}`)
     if(procura.length==0){
         alert('Digite algo para procurar !!')
     }else{
@@ -111,7 +117,7 @@ function menu(){
     if(menu_conf.style.display==="none"){
         menu_conf.style.display='block'
         cadastro.style.display='none'
-
+        conteiner.style.display='none'
     }
     else{
         menu_conf.style.display="none"
