@@ -7,14 +7,14 @@
     var tit=''
     var categ=''
     var conteud=''
-   
+   var procura=''
+    var procura_menu=''
     var vet_titulo=[]
     var vet_categ=[] 
     var vet_cont=[]
        var cont=0
     var aux=-1
     var menu_conf= document.getElementById('menu-conf')
-
     
 function cadastrar (){
     menu_conf.style.display='none'
@@ -24,7 +24,7 @@ function cadastrar (){
 }
 function finalizar(){
 
-    if(titulo.value.length== 0 ||categoria.value.length==0||conteudo.length==0){
+    if(titulo.value.length== 0 ||categoria.value.length==0||conteudo.value.length==0){
         alert("Preencha todos os campos!!")
 
     }
@@ -79,11 +79,12 @@ function exibir   (){
 conteiner.style.display='block'
 conteiner.innerHTML=""
 function press(event) {
+    procura= document.querySelector("#busca").value
     
-   if(event.key==='Enter'){  
+   if(event.key=='Enter'){  
     alert('Entrou')  
     cadastro.style.display='none'
-       var procura= document.getElementById("busca").value
+     
        alert(` O valor de procura é ${procura}`)
     if(procura.length==0){
         alert('Digite algo para procurar !!')
@@ -107,12 +108,50 @@ function press(event) {
             div.innerHTML=`<h1> ${vet_titulo[fixa]}</h1> <p id='categ'>${vet_categ[fixa]}</p><p>${vet_cont[fixa]}</p>`
             conteiner.appendChild(div)
         }
+        
     }
    
 }}}
+conteiner.style.display='block'
+conteiner.innerHTML=""
+
+function press_menu(event) {
+    procura_menu= document.querySelector("#busca-menu").value
     
+   if(event.key=='Enter'){  
+    alert('Entrou')  
+    cadastro.style.display='none'
+     
+       alert(` O valor de procura é ${procura_menu}`)
+    if(procura.length==0){
+        alert('Digite algo para procurar !!')
+    }else{
+        conteiner.innerHTML=""
+    procura_menu=procura_menu.toLocaleUpperCase()
+    var fixa=0  // Variavel responsavel por pegar em qual posição do vetor foi encontrada certa semelhança entre o que o usuário procura e o que tem nas divs 
+    for(let r = 0 ;r< vet_titulo.length;r++ ){
+        tit=vet_titulo[r]
+        tit=tit.toLocaleUpperCase()
+        categ=vet_categ[r]
+        categ=categ.toLocaleUpperCase()
+        conteud=vet_cont[r]
+        conteud=conteud.toLocaleUpperCase()
+
+        if(tit.includes(procura_menu)||categ.includes(procura_menu)||conteud.includes(procura_menu)){
+            fixa=r
+            
+            var div = document.createElement("div")
+            div.class='not'
+            div.innerHTML=`<h1> ${vet_titulo[fixa]}</h1> <p id='categ'>${vet_categ[fixa]}</p><p>${vet_cont[fixa]}</p>`
+            conteiner.appendChild(div)
+        }
+        
+    }
+   
+}}}
 menu_conf.style.display='none'
 function menu(){
+
     
     if(menu_conf.style.display==="none"){
         menu_conf.style.display='block'
@@ -122,4 +161,31 @@ function menu(){
     else{
         menu_conf.style.display="none"
     }
-    }
+    if(press)
+    procura= document.querySelector(".busca").value
+    conteiner.innerHTML=""
+    procura=procura.toLocaleUpperCase()
+    var fixa=0  // Variavel responsavel por pegar em qual posição do vetor foi encontrada certa semelhança entre o que o usuário procura e o que tem nas divs 
+    for(let r = 0 ;r< vet_titulo.length;r++ ){
+        tit=vet_titulo[r]
+        tit=tit.toLocaleUpperCase()
+        categ=vet_categ[r]
+        categ=categ.toLocaleUpperCase()
+        conteud=vet_cont[r]
+        conteud=conteud.toLocaleUpperCase()
+
+        if(tit.includes(procura)||categ.includes(procura)||conteud.includes(procura)){
+            fixa=r
+            
+            var div = document.createElement("div")
+            div.class='not'
+            div.innerHTML=`<h1> ${vet_titulo[fixa]}</h1> <p id='categ'>${vet_categ[fixa]}</p><p>${vet_cont[fixa]}</p>`
+            conteiner.appendChild(div)
+        }
+        
+}}
+function buscar(){
+    procura= document.getElementById("busca").value
+    cadastro.style.display='none'
+    alert(` O valor de procura é ${procura}`)
+}
