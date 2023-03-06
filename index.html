@@ -10,7 +10,22 @@
     <link rel="shortcut icon" href="imagens/search_ideogram.ico" type="image/x-icon">
 </head>
 <body>
-    <header><h1 id="logo">Logo</h1> <nav id="menu"><a href="#" class="link" onclick="cadastrar()">Cadastro de Noticias</a> <a href="#" class="link" onclick="exibir()">Exibir Noticias </a> <input type="text" id="busca" placeholder="Busca" href="imagens/search_ideogram.ico"  onkeypress="press(event)"></nav><div id="menu-img"> <img id="menu-icon" src="imagens/menu_black_24dp.svg" alt="" onclick="menu()"></div><div id="menu-conf"><a href="#" class="link" onclick="cadastrar()">Cadastro de Noticias</a> <a href="#" class="link" onclick="exibir()">Exibir Noticias </a> <input type="text" id="busca" placeholder="Busca" href="imagens/search_ideogram.ico"  onkeypress="press(event)"></div></header>
+    <header>
+      <h1 id="logo">Logo</h1> 
+      <nav id="menu">
+        <a href="#" class="link" onclick="cadastrar()">Cadastro de Noticias</a> 
+        <a href="#" class="link" onclick="exibir()">Exibir Noticias </a> 
+        <input type="text" id="busca" placeholder="Busca" href="imagens/search_ideogram.ico"  onkeypress="press(event)">
+      </nav>
+      <div id="menu-img"> 
+        <img id="menu-icon" src="imagens/menu_black_24dp.svg" alt="" onclick="menu()"></div>
+        <div id="menu-conf">
+          <a href="#" class="link" onclick="cadastrar()">Cadastro de Noticias</a> 
+          <a href="#" class="link" onclick="exibir()">Exibir Noticias </a> 
+          <input type="text" id="busca-menu" placeholder="Busca" href="imagens/search_ideogram.ico" onkeypress="press_menu(event)" >
+          <input type="button" value="Buscar" onclick="buscar()">
+        </div>
+      </header>
   <h1 id="msg"> Sem Noticias</h1>
     <section id="conteiner">
         
