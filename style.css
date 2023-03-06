@@ -146,6 +146,15 @@ header {
     padding: 3px 20px 3px 3px;
     border-radius: 10px;
 }
+#busca-menu{
+    background-image: url(imagens/search_ideogram.ico);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 3px 20px 3px 3px;
+    border-radius: 10px;
+
+}
 
 #conteiner {
     margin-left: 5vh;
