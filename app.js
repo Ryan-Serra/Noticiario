@@ -15,9 +15,10 @@ var procura_menu=''
 var vet_titulo=[]
 var vet_categ=[] 
 var vet_cont=[]
-   var cont=0
+var cont=0
 var aux=-1
 var menu_conf= document.getElementById('menu-conf')
+
 
 function cadastrar (){
 menu_conf.style.display='none'
@@ -26,6 +27,7 @@ conteiner.innerHTML=""
  msg.style.display="none"
 }
 function finalizar(){
+    // Função responsavel por garantir que nenhum campo foi deixado em branco 
 
 if(titulo.value.length== 0 ||categoria.value.length==0||conteudo.value.length==0){
     alert("Preencha todos os campos!!")
@@ -68,7 +70,7 @@ else{
 for (let r = 0;r<cont;r++) {
 var div = document.createElement("div")
 div.class='not'
-div.innerHTML=`<h1> ${vet_titulo[r]}</h1> <p id='categ'>${vet_categ[r]}</p><p>${vet_cont[r]}</p>`
+div.innerHTML=`<p id='categ'>${vet_categ[r]}</p> <hr> <h1> ${vet_titulo[r]}</h1> <p id="paragrafo">${vet_cont[r]}</p>`
 conteiner.appendChild(div) 
 }
 }
@@ -157,3 +159,4 @@ else{
     menu_conf.style.display="none"
 }
 }
+
