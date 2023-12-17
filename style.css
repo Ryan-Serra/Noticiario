@@ -166,27 +166,28 @@ header {
 }
 
 #conteiner div {
-    padding: 10px;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    min-height: 150px;
     background-color: white;
-    max-width: 275px;
-    display: inline-block;
+    display: flexbox;
+    padding: 15px;
+    border-radius: 8px;
+    max-width:300px;
 }
+
 #conteiner div h1 {
+    display: inline;
     color : red;
     text-align:center;
 }
 #conteiner div #categ{
-    text-indent: 0;
+    display: block;
     color:blue;
-}
-
-#conteiner  div p {
-    text-indent: 2vh;
     text-align: justify;
     font-size: 1.2em;
+}
+
+#conteiner  div #paragrafo {
+ column-count: 2;
+   
 }
 
 footer {
